@@ -10,7 +10,6 @@ Source:		http://search.cpan.org/CPAN/authors/id/D/DO/DOUGM/%{modname}-Perl-%{ver
 URL:		http://search.cpan.org/~dougm/%{modname}-Perl-%{version}/
 BuildRequires:	perl-devel
 BuildRequires:  xmms-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 This package provides the following modules:
