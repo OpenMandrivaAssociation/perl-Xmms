@@ -2,7 +2,7 @@
 
 Name:		perl-%{modname}
 Version:	0.12
-Release:	%mkrel 10
+Release:	%mkrel 11
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl modules to control and configure XMMS
