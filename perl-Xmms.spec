@@ -1,16 +1,20 @@
-%define modname	Xmms
+%define upstream_name	 Xmms
+%define upstream_version 0.12
 
-Name:		perl-%{modname}
-Version:	0.12
-Release:	%mkrel 11
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Perl modules to control and configure XMMS
-Source:		http://search.cpan.org/CPAN/authors/id/D/DO/DOUGM/%{modname}-Perl-%{version}.tar.gz
-URL:		http://search.cpan.org/~dougm/%{modname}-Perl-%{version}/
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/~dougm/%{upstream_name}-Perl-%{upstream_version}/
+Source0:	http://search.cpan.org/CPAN/authors/id/D/DO/DOUGM/%{upstream_name}-Perl-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
 BuildRequires:  xmms-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This package provides the following modules:
@@ -26,7 +30,7 @@ This package provides the following modules:
                 Perl (not yet released, may never be)
 
 %prep
-%setup -q -n %{modname}-Perl-%{version}
+%setup -q -n %{upstream_name}-Perl-%{upstream_version}
 
 %build
 perl Makefile.PL
@@ -41,10 +45,9 @@ rm -Rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%dir %{perl_vendorarch}/auto/%{modname}
-%{perl_vendorarch}/auto/%{modname}/*
-%{perl_vendorarch}/%{modname}*
-%{perl_vendorarch}/*/%{modname}.pm
-%{_mandir}/man?/*
 %doc README
-
+%dir %{perl_vendorarch}/auto/%{upstream_name}
+%{perl_vendorarch}/auto/%{upstream_name}/*
+%{perl_vendorarch}/%{upstream_name}*
+%{perl_vendorarch}/*/%{upstream_name}.pm
+%{_mandir}/man?/*
