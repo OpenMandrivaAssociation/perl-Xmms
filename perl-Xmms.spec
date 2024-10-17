@@ -8,7 +8,7 @@ Release:	3
 Summary:	Perl modules to control and configure XMMS
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/~dougm/%{upstream_name}-Perl-%{upstream_version}/
+Url:		https://search.cpan.org/~dougm/%{upstream_name}-Perl-%{upstream_version}/
 Source0:	http://search.cpan.org/CPAN/authors/id/D/DO/DOUGM/%{upstream_name}-Perl-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
